@@ -1,0 +1,89 @@
+{
+	"filters": [
+		{
+			"command": "echo \"Update Regolith to 1.0.0 or later!\"",
+			"name": "Checking whether when field is available",
+			"runWith": "shell",
+			"when": "false"
+		},
+		{
+			"command": "updateRegolithToV1OrLater_dummyCommandToFailExecution",
+			"name": "Dummy command to stop execution",
+			"runWith": "shell",
+			"when": "false"
+		},
+		{
+			"arguments": [
+				"compile",
+				"--remove-src",
+				"--scope",
+				"data/jsonte",
+				"--scope",
+				"data/json_templating_engine",
+				"--cache-dir",
+				"data/jsonte/cache",
+				"BP",
+				"RP"
+			],
+			"command": "jsonte",
+			"name": "Templating JSON template files",
+			"runWith": "shell",
+			"when": "(semver(version) \u003e= semver('1.0.4') || semver(version) == semver('0.0.0')) \u0026\u0026 settings?.useLocal"
+		},
+		{
+			"arguments": [
+				"compile",
+				"--remove-src",
+				"--scope",
+				"data/jsonte",
+				"--scope",
+				"data/json_templating_engine",
+				"--cache-dir",
+				"data/jsonte/cache",
+				"BP",
+				"RP"
+			],
+			"exe": "jsonte.exe",
+			"name": "Templating JSON template files",
+			"runWith": "exe",
+			"when": "((semver(version) \u003c semver('1.0.4') \u0026\u0026 semver(version) != semver('0.0.0')) || !settings?.useLocal) \u0026\u0026 os == 'windows'"
+		},
+		{
+			"arguments": [
+				"compile",
+				"--remove-src",
+				"--scope",
+				"data/jsonte",
+				"--scope",
+				"data/json_templating_engine",
+				"--cache-dir",
+				"data/jsonte/cache",
+				"BP",
+				"RP"
+			],
+			"exe": "jsonte-mac",
+			"name": "Templating JSON template files",
+			"runWith": "exe",
+			"when": "((semver(version) \u003c semver('1.0.4') \u0026\u0026 semver(version) != semver('0.0.0')) || !settings?.useLocal) \u0026\u0026 os == 'darwin'"
+		},
+		{
+			"arguments": [
+				"compile",
+				"--remove-src",
+				"--scope",
+				"data/jsonte",
+				"--scope",
+				"data/json_templating_engine",
+				"--cache-dir",
+				"data/jsonte/cache",
+				"BP",
+				"RP"
+			],
+			"exe": "jsonte-linux",
+			"name": "Templating JSON template files",
+			"runWith": "exe",
+			"when": "((semver(version) \u003c semver('1.0.4') \u0026\u0026 semver(version) != semver('0.0.0')) || !settings?.useLocal) \u0026\u0026 os == 'linux'"
+		}
+	],
+	"version": "2.13.1"
+}

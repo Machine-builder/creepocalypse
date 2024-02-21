@@ -1,0 +1,63 @@
+{
+	"rp": {
+		"\\Users\\Josh\\AppData\\Roaming\\.minecraft_bedrock\\installations\\YouTube\\Latest Release\\packageData\\development_resource_packs\\creepoc_rp": [
+			"animation_controllers\\rampage.rpac.json",
+			"animation_controllers\\sandstreak.rpac.json",
+			"animations\\rampage.rpa.json",
+			"animations\\sandstreak.rpa.json",
+			"animations\\sporeburst.rpa.json",
+			"attachables\\sporeburst_hat.json",
+			"entity\\bonehead.rpe.json",
+			"entity\\bonehead_head.rpe.json",
+			"entity\\rampage.rpe.json",
+			"entity\\sandstreak.rpe.json",
+			"entity\\sporeburst.rpe.json",
+			"entity\\timberling.rpe.json",
+			"entity\\timberling_splinter.rpe.json",
+			"manifest.json",
+			"models\\entity\\bonehead_head.geo.json",
+			"models\\entity\\rampage.geo.bbmodel",
+			"models\\entity\\rampage.geo.json",
+			"models\\entity\\sandstreak.geo.bbmodel",
+			"models\\entity\\sandstreak.geo.json",
+			"models\\entity\\sporeburst.geo.json",
+			"models\\entity\\sporeburst_hat.geo.json",
+			"models\\entity\\timberling.geo.json",
+			"models\\entity\\timberling_splinter.geo.json",
+			"render_controllers\\bonehead.render_controllers.json",
+			"render_controllers\\sporeburst.render_controllers.json",
+			"sounds.json",
+			"texts\\en_US.lang",
+			"textures\\entity\\creeper\\bonehead.png",
+			"textures\\entity\\creeper\\rampage.png",
+			"textures\\entity\\creeper\\sandstreak.png",
+			"textures\\entity\\creeper\\sporeburst.png",
+			"textures\\entity\\creeper\\timberling.png",
+			"textures\\entity\\creeper\\timberling_splinter.png",
+			"textures\\item_texture.json",
+			"textures\\items\\sporeburst_hat.png"
+		]
+	},
+	"bp": {
+		"\\Users\\Josh\\AppData\\Roaming\\.minecraft_bedrock\\installations\\YouTube\\Latest Release\\packageData\\development_behavior_packs\\creepoc_bp": [
+			"animation_controllers\\generic.bpac.json",
+			"entities\\bonehead.json",
+			"entities\\bonehead_head.json",
+			"entities\\rampage.json",
+			"entities\\rampage_instant_explosion.json",
+			"entities\\sandstreak.json",
+			"entities\\sporeburst.json",
+			"entities\\timberling.json",
+			"entities\\timberling_blast.json",
+			"entities\\timberling_splinter.json",
+			"items\\sporeburst_hat.json",
+			"loot_tables\\entities\\bonehead.json",
+			"loot_tables\\entities\\sandstreak.json",
+			"loot_tables\\entities\\sporeburst.json",
+			"loot_tables\\entities\\sporeburst_hat.json",
+			"loot_tables\\entities\\timberling.json",
+			"manifest.json",
+			"scripts\\main.js"
+		]
+	}
+}

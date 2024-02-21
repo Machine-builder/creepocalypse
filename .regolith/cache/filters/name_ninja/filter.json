@@ -1,0 +1,11 @@
+{
+	"description": "Automatically generates entity, block, spawn egg, and item names, based on a custom 'name' field, or on the entities identifier.",
+	"filters": [
+		{
+			"name": "Language Assist",
+			"runWith": "python",
+			"script": "./name_ninja.py"
+		}
+	],
+	"version": "1.2.3"
+}
