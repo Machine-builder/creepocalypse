@@ -1,0 +1,55 @@
+{
+    "format_version": 2,
+    "header": {
+        "description": "Creepocalypse, by MACHINE_BUILDER",
+        "name": "Creepocalypse",
+        "uuid": "b0f3be9f-9bb3-4c88-a7f1-7a816d9bbb1c",
+        "version": [
+            1,
+            0,
+            0
+        ],
+        "min_engine_version": [
+            1,
+            20,
+            40
+        ]
+    },
+    "modules": [
+        {
+            "description": "...",
+            "type": "data",
+            "uuid": "265245d4-3110-4b78-8fdc-5e36e5d557fc",
+            "version": [
+                1,
+                0,
+                0
+            ]
+        },
+        {
+            "description": "Scripting module",
+            "type": "script",
+            "uuid": "fe504ac0-d022-42cb-afa1-f6312351ce22",
+            "version": [
+                0,
+                0,
+                1
+            ],
+            "entry": "scripts/main.js"
+        }
+    ],
+    "dependencies": [
+        {
+            "uuid": "71295d81-69ee-4366-914d-466ae257d95d",
+            "version": [
+                1,
+                0,
+                0
+            ]
+        },
+        {
+            "module_name": "@minecraft/server",
+            "version": "1.8.0"
+        }
+    ]
+}

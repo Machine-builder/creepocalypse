@@ -1,0 +1,29 @@
+{
+	"format_version": "1.19.0",
+	"animation_controllers": {
+		"controller.animation.cpoc.rampage.twitch": {
+			"states": {
+				"default": {
+					"on_entry": ["v.twitch_time = q.life_time+Math.random(3,6);"],
+					"transitions": [
+						{"twitch": "q.life_time > v.twitch_time"}
+					],
+					"blend_transition": 0.1,
+					"blend_via_shortest_path": true
+				},
+				"twitch": {
+					"animations": [
+						{"twitch_a": "v.twitch_n < 1"},
+						{"twitch_b": "v.twitch_n >= 1 && v.twitch_n < 2"}
+					],
+					"on_entry": ["v.twitch_n = Math.random(0, 2);"],
+					"transitions": [
+						{"default": "q.any_animation_finished"}
+					],
+					"blend_transition": 0.1,
+					"blend_via_shortest_path": true
+				}
+			}
+		}
+	}
+}

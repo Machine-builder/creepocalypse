@@ -1,0 +1,75 @@
+{
+    "format_version": "1.20.41",
+    "animation_controllers": {
+        "controller.animation.cpoc.explode_detection": {
+            "initial_state": "default",
+            "states": {
+                "default": {
+                    "transitions": [
+                        {
+                            "exploding": "q.is_stunned"
+                        }
+                    ]
+                },
+                "exploding": {
+                    "transitions": [
+                        {
+                            "default": "!q.is_stunned"
+                        }
+                    ],
+                    "on_entry": [
+                        "/scriptevent cpoc:start_exploding"
+                    ]
+                }
+            }
+        },
+        "controller.animation.cpoc.tick": {
+            "initial_state": "default",
+            "states": {
+                "default": {
+                    "transitions": [
+                        {
+                            "tick": "q.is_sheared"
+                        }
+                    ]
+                },
+                "tick": {
+                    "transitions": [
+                        {
+                            "default": "!q.is_sheared"
+                        }
+                    ],
+                    "on_entry": [
+                        "/scriptevent cpoc:tick",
+                        "@s cpoc:clear_tick"
+                    ]
+                }
+            }
+        },
+        "controller.animation.cpoc.check_target": {
+            "initial_state": "no_target",
+            "states": {
+                "no_target": {
+                    "transitions": [
+                        {
+                            "has_target": "q.has_target"
+                        }
+                    ],
+                    "on_entry": [
+                        "@s cpoc:no_target"
+                    ]
+                },
+                "has_target": {
+                    "transitions": [
+                        {
+                            "no_target": "!q.has_target"
+                        }
+                    ],
+                    "on_entry": [
+                        "@s cpoc:has_target"
+                    ]
+                }
+            }
+        }
+    }
+}

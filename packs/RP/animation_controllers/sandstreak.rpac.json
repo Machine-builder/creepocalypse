@@ -1,0 +1,40 @@
+{
+	"format_version": "1.19.0",
+	"animation_controllers": {
+		"controller.animation.cpoc.sandstreak.main": {
+			"initial_state": "choose_state",
+			"states": {
+				"choose_state": {
+					"transitions": [
+						{"hiding": "q.property('cpoc:is_hiding')"},
+						{"active": "!q.property('cpoc:is_hiding')"}
+					]
+				},
+				"hiding": {
+					"animations": ["hiding"],
+					"transitions": [
+						{"jump": "!q.property('cpoc:is_hiding')"}
+					],
+					"blend_transition": 0.1,
+					"blend_via_shortest_path": true
+				},
+				"jump": {
+					"animations": ["jump"],
+					"transitions": [
+						{"active": "q.any_animation_finished"}
+					],
+					"blend_transition": 0.1,
+					"blend_via_shortest_path": true
+				},
+				"active": {
+					"animations": ["creeper_head", "creeper_legs"],
+					"transitions": [
+						{"hiding": "q.property('cpoc:is_hiding')"}
+					],
+					"blend_transition": 0.1,
+					"blend_via_shortest_path": true
+				}
+			}
+		}
+	}
+}

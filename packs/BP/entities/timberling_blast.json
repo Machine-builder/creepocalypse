@@ -1,0 +1,68 @@
+{
+  "format_version": "1.13.0",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "cpoc:timberling_blast",
+      "is_spawnable": false,
+      "is_summonable": true,
+      "is_experimental": false
+    },
+    "component_groups": {
+      "cpoc:despawn": {
+        "minecraft:instant_despawn": {}
+      }
+    },
+    "components": {
+      "minecraft:collision_box": {
+        "width": 0.0,
+        "height": 0.0
+      },
+      "minecraft:damage_sensor": {
+        "triggers": [
+          {
+            "cause": "all",
+            "deals_damage": false
+          }
+        ]
+      },
+      "minecraft:physics": {},
+      "minecraft:pushable": {
+        "is_pushable": false,
+        "is_pushable_by_piston": true
+      },
+      "minecraft:spawn_entity": {
+        "entities": {
+          "single_use": true,
+          "min_wait_time": 0,
+          "max_wait_time": 0,
+          "num_to_spawn": 8,
+          "spawn_entity": "cpoc:timberling_splinter"
+        }
+      },
+      "minecraft:conditional_bandwidth_optimization": {
+        "default_values": {
+          "max_optimized_distance": 80.0,
+          "max_dropped_ticks": 7,
+          "use_motion_prediction_hints": true
+        }
+      },
+      "minecraft:timer": {
+        "time": 0.1,
+        "looping": true,
+        "time_down_event": {
+          "event": "cpoc:despawn",
+          "target": "self"
+        }
+      }
+    },
+    "events": {
+      "cpoc:despawn": {
+        "add": {
+          "component_groups": [
+            "cpoc:despawn"
+          ]
+        }
+      }
+    }
+  }
+}

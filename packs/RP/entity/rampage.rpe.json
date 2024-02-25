@@ -1,0 +1,52 @@
+{
+    "format_version": "1.10.0",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "cpoc:rampage",
+            "geometry": {
+                "default": "geometry.cpoc.rampage"
+            },
+            "materials": {
+                "default": "creeper"
+            },
+            "textures": {
+                "default": "textures/entity/creeper/rampage"
+            },
+            "render_controllers": [
+                "controller.render.creeper"
+            ],
+            "scripts": {
+                "pre_animation": [
+                    "variable.wobble = Math.sin(query.swell_amount * 5730) * query.swell_amount * 0.01 + 1.0;",
+                    "variable.swelling_scale1 = (Math.pow(Math.clamp(query.swell_amount, 0.0, 1.0), 4.0) * 0.4 + 1.0) * variable.wobble;",
+                    "variable.swelling_scale2 = (Math.pow(Math.clamp(query.swell_amount, 0.0, 1.0), 4.0) * 0.1 + 1.0) / variable.wobble;",
+                    "variable.leg_rot = Math.cos(query.modified_distance_moved * 38.17326) * 80.22 * query.modified_move_speed;",
+                    "variable.flash = Math.mod(Math.Round(query.swell_amount * 10.0), 2.0);",
+                    "variable.idle_wave1 = math.sin((q.life_time)*150);",
+                    "variable.idle_wave2 = math.sin((q.life_time+0.4)*150);"
+                ],
+                "animate": [
+                    "idle",
+                    "swelling",
+                    "look_at_target",
+                    "legs",
+                    "twitch_controller"
+                ]
+            },
+            "animations": {
+                "twitch_controller": "controller.animation.cpoc.rampage.twitch",
+                "twitch_a": "animation.cpoc.rampage.twitch_a",
+                "twitch_b": "animation.cpoc.rampage.twitch_b",
+                
+                "idle": "animation.cpoc.rampage.idle",
+                "look_at_target": "animation.cpoc.rampage.look_at_target",
+                "legs": "animation.creeper.legs",
+                "swelling": "animation.creeper.swelling"
+            },
+            "spawn_egg": {
+                "base_color": "#000000",
+                "overlay_color": "#ffffff"
+            }
+        }
+    }
+}

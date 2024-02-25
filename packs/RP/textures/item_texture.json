@@ -1,0 +1,9 @@
+{
+   "resource_pack_name" : "vanilla",
+   "texture_data" : {
+      "cpoc:sporeburst_hat" : {
+         "textures" : "textures/items/sporeburst_hat"
+      }
+   },
+   "texture_name" : "atlas.items"
+}

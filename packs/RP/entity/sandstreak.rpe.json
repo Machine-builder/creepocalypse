@@ -1,0 +1,45 @@
+{
+    "format_version": "1.10.0",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "cpoc:sandstreak",
+            "geometry": {
+                "default": "geometry.cpoc.sandstreak"
+            },
+            "materials": {
+                "default": "creeper"
+            },
+            "textures": {
+                "default": "textures/entity/creeper/sandstreak"
+            },
+            "render_controllers": [
+                "controller.render.creeper"
+            ],
+            "scripts": {
+                "pre_animation": [
+                    "variable.wobble = Math.sin(query.swell_amount * 5730) * query.swell_amount * 0.01 + 1.0;",
+                    "variable.swelling_scale1 = (Math.pow(Math.clamp(query.swell_amount, 0.0, 1.0), 4.0) * 0.4 + 1.0) * variable.wobble;",
+                    "variable.swelling_scale2 = (Math.pow(Math.clamp(query.swell_amount, 0.0, 1.0), 4.0) * 0.1 + 1.0) / variable.wobble;",
+                    "variable.leg_rot = Math.cos(query.modified_distance_moved * 38.17326) * 80.22 * query.modified_move_speed;",
+                    "variable.flash = Math.mod(Math.Round(query.swell_amount * 10.0), 2.0);"
+                ],
+                "animate": [
+                    "root",
+                    "creeper_swelling"
+                ]
+            },
+            "animations": {
+                "root": "controller.animation.cpoc.sandstreak.main",
+                "hiding": "animation.cpoc.sandstreak.hiding",
+                "jump": "animation.cpoc.sandstreak.jump",
+                "creeper_head": "animation.common.look_at_target",
+                "creeper_legs": "animation.creeper.legs",
+                "creeper_swelling": "animation.creeper.swelling"
+            },
+            "spawn_egg": {
+                "base_color": "#dec391",
+                "overlay_color": "#497d14"
+            }
+        }
+    }
+}

@@ -1,0 +1,100 @@
+{
+   "entity_sounds": {
+      "entities": {
+         "cpoc:bonehead": {
+            "events": {
+               "ambient": "mob.skeleton.say",
+               "death": "mob.skeleton.death",
+               "hurt": {
+                  "sound": "mob.skeleton.hurt",
+                  "volume": 0.70
+               },
+               "step": {
+                  "pitch": 1.0,
+                  "sound": "mob.skeleton.step",
+                  "volume": 1.0
+               },
+               "fuse": {
+                  "pitch": 0.50,
+                  "sound": "random.fuse",
+                  "volume": 1.0
+               }
+            },
+            "pitch": [
+               0.80,
+               1.20
+            ],
+            "volume": 1.0
+         },
+         "cpoc:bonehead_head": {
+            "events": {
+               "ambient": "mob.skeleton.say",
+               "death": "mob.skeleton.death",
+               "hurt": {
+                  "sound": "mob.skeleton.hurt",
+                  "volume": 0.70
+               },
+               "step": {
+                  "pitch": 1.0,
+                  "sound": "mob.skeleton.step",
+                  "volume": 1.0
+               },
+               "squish.small": {
+                  "pitch": [
+                     0.640,
+                     0.960
+                  ],
+                  "sound": "mob.skeleton.step"
+               }
+            },
+            "pitch": [
+               0.80,
+               1.20
+            ],
+            "volume": 1.0
+         },
+         "cpoc:sporeburst": {
+            "events": {
+               "step": {
+                  "pitch": 1.0,
+                  "sound": "step.grass",
+                  "volume": 1.0
+               },
+               "death": "mob.creeper.death",
+               "fuse": {
+                  "pitch": 0.50,
+                  "sound": "random.fuse",
+                  "volume": 1.0
+               },
+               "hurt": "mob.creeper.say"
+            },
+            "pitch": [
+               0.80,
+               1.20
+            ],
+            "volume": 1.0
+         },
+         "cpoc:timberling": {
+            "events": {
+               "step": {
+                  "pitch": 1.0,
+                  "sound": "step.wood",
+                  "volume": 1.0
+               },
+               "death": "land.wood",
+               "fuse": {
+                  "pitch": 0.4,
+                  "sound": "random.fuse",
+                  "volume": 1.5
+               },
+               "hurt": "hit.wood"
+            },
+            "pitch": [
+               0.80,
+               1.20
+            ],
+            "volume": 1.0
+         }
+      }
+   }
+}

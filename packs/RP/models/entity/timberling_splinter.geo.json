@@ -1,0 +1,51 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.cpoc.timberling_splinter",
+				"texture_width": 32,
+				"texture_height": 32,
+				"visible_bounds_width": 3,
+				"visible_bounds_height": 1.5,
+				"visible_bounds_offset": [0, 0.25, 0]
+			},
+			"bones": [
+				{
+					"name": "body",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{
+							"origin": [0, -1, -3],
+							"size": [0, 2, 14],
+							"pivot": [0, 0, 0],
+							"rotation": [0, 0, 45],
+							"uv": {
+								"north": {"uv": [6, 4], "uv_size": [2, 2]},
+								"east": {"uv": [14, 0], "uv_size": [14, 2]},
+								"south": {"uv": [6, 6], "uv_size": [2, 2]},
+								"west": {"uv": [0, 2], "uv_size": [14, 2]},
+								"up": {"uv": [0, 18], "uv_size": [2, 14]},
+								"down": {"uv": [0, 32], "uv_size": [2, -14]}
+							}
+						},
+						{
+							"origin": [-1, 0, -3],
+							"size": [2, 0, 14],
+							"pivot": [0, 0, 0],
+							"rotation": [0, 0, 45],
+							"uv": {
+								"north": {"uv": [6, 4], "uv_size": [2, 2]},
+								"east": {"uv": [14, 0], "uv_size": [14, 2]},
+								"south": {"uv": [6, 6], "uv_size": [2, 2]},
+								"west": {"uv": [14, 0], "uv_size": [14, 2]},
+								"up": {"uv": [0, 4], "uv_size": [2, 14]},
+								"down": {"uv": [0, 32], "uv_size": [2, -14]}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

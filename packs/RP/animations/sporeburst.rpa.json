@@ -1,0 +1,39 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.cpoc.sporeburst.look_at_target": {
+			"loop": true,
+			"bones": {
+				"head": {
+					"relative_to": {
+						"rotation": "entity"
+					},
+					"rotation": ["query.target_x_rotation - this - 5", "query.target_y_rotation - this", 0]
+				}
+			}
+		},
+		"animation.cpoc.sporeburst.legs": {
+			"loop": true,
+			"bones": {
+				"leg0": {
+					"rotation": ["variable.leg_rot - this", 0, 0]
+				},
+				"leg1": {
+					"rotation": ["-variable.leg_rot - this", 0, 0]
+				},
+				"leg2": {
+					"rotation": ["-variable.leg_rot - this", 0, 0]
+				},
+				"leg3": {
+					"rotation": ["variable.leg_rot - this", 0, 0]
+				},
+				"head": {
+					"rotation": [0, 0, "variable.head_rot*0.5"]
+				},
+				"hat": {
+					"rotation": [0, 0, "variable.head_rot*0.5"]
+				}
+			}
+		}
+	}
+}
