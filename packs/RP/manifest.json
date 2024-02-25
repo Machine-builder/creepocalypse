@@ -4,7 +4,7 @@
         "description": "Creepocalypse, by MACHINE_BUILDER",
         "name": "Creepocalypse",
         "uuid": "71295d81-69ee-4366-914d-466ae257d95d",
-        "version": [1, 0, 0],
+        "version": [1, 0, 1],
         "min_engine_version": [ 1, 20, 40 ]
     },
     "modules": [
@@ -12,13 +12,13 @@
             "description": "",
             "type": "resources",
             "uuid": "79a3122b-169e-4434-8da1-7fe0dabd700c",
-            "version": [1, 0, 0]
+            "version": [1, 0, 1]
         }
     ],
     "dependencies": [
         {
             "uuid": "b0f3be9f-9bb3-4c88-a7f1-7a816d9bbb1c",
-            "version": [1, 0, 0]
+            "version": [1, 0, 1]
         }
     ]
 }
